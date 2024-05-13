@@ -3,6 +3,7 @@ Certainly! Below is a full example of how to create a custom authorization attri
 - Create a Custom Authorize Attribute:
 First, define a custom authorization attribute by creating a class that inherits from IAuthorizationFilter. This interface exposes a single method called OnAuthorization(AuthorizationFilterContext context) that executes before an action method is invoked. Here's the complete code:
 
+```
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -18,10 +19,12 @@ public sealed class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
         }
     }
 }
+```
 
 - Apply the Custom Attribute:
 You can apply this custom attribute to an action method or a controller. For instance, consider the following action method that uses our CustomAuthorizeAttribute:
 
+```
 [ApiController]
 [Route("api/[controller]")]
 public class WeatherForecastController : ControllerBase
@@ -40,10 +43,11 @@ public class WeatherForecastController : ControllerBase
         }).ToArray();
     }
 }
-
+```
 - Inject Dependencies (Optional):
 Sometimes you need to inject external dependencies within the filter to perform more complex authorization logic. For example, to retrieve the logged-in user's claims, you can inject IHttpContextAccessor:
 
+```
 public class CustomAuthorizeAttribute : Attribute
 {
     private readonly IEnumerable<Claim> _claims;
@@ -55,6 +59,7 @@ public class CustomAuthorizeAttribute : Attribute
 
     // Your authorization logic using _claims
 }
+```
 
 Remember to configure the HttpContextAccessor for dependency injection in your Program.cs file:
 
