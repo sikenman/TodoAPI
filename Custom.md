@@ -1,3 +1,9 @@
+##Authorization
+https://blog.joaograssi.com/posts/2021/asp-net-core-permission-based-authorization-middleware/
+https://learn.microsoft.com/en-us/aspnet/core/security/authorization/introduction?view=aspnetcore-8.0
+https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-8.0
+
+##Authentication
 https://learn.microsoft.com/en-us/aspnet/core/security/authorization/introduction?view=aspnetcore-8.0
 https://learn.microsoft.com/en-us/aspnet/core/security/authorization/iard?view=aspnetcore-8.0
 https://learn.microsoft.com/en-us/aspnet/core/security/authorization/claims?view=aspnetcore-8.0
